@@ -1,0 +1,17 @@
+@import '/styles/utils/breakpoint';
+@import '/styles/utils/mixin';
+
+.global-navigation {
+    margin-left: auto;
+    ul li {
+        display: inline-block;
+        padding-left: 15px;
+    }
+}
+
+.pc-break {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+}

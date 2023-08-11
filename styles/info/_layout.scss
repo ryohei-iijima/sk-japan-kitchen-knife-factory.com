@@ -1,0 +1,10 @@
+@import '/styles/utils/breakpoint';
+@import '/styles/utils/mixin';
+
+.readText {
+    margin-bottom: 30px;
+    @include mq(md) {
+        margin-bottom: 50px;
+    }
+}
+

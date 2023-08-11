@@ -1,0 +1,39 @@
+@import '/styles/info/layout';
+
+.privacy {
+    margin-bottom: 30px;
+    @include mq(md) {
+        margin-bottom: 50px;
+    }
+
+    dt {
+        font-size: 1.285rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include mq(md) {
+            font-size: 18px;
+        }
+    }
+    dd a {
+        color: #000;
+        text-decoration: underline;
+        :hover {
+            text-decoration: none;
+        }
+    }
+    dd ul,
+    dd ol {
+        text-indent: -1em;
+        padding: 0 0 10px 1em;
+        @include mq(md) {
+            padding: 10px 0 10px 1em;
+        }
+        li {
+            padding-bottom: 5px;
+        }
+    }
+    dd .indent3 {
+        text-indent: -2.5em;
+        padding-left: 2.5em;
+    }
+}

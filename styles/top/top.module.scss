@@ -1,0 +1,122 @@
+@charset "utf-8";
+.wrap{
+	position: relative;
+}
+.bgArea{
+	width: 100%;
+	height: calc(100vh - 96px);
+	position: absolute;
+	top: 48px;
+	left: 0;
+	z-index: 1;
+	background: url(/images/bg01.jpg) no-repeat center center / cover;
+}
+/*====================
+ contents
+====================*/
+.contents{
+	background: transparent;
+	position: relative;
+	z-index: 2;
+}
+.topcontent{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: calc(100vh - 96px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+}
+.mainrogo{
+	text-align: center;
+}
+.mainrogo img{
+	max-width: 450px;
+}
+.eyecatching{
+	color: #fff;
+	text-shadow: 0 10px 30px rgba(0,0,0,.6);
+	text-align: center;
+	margin: 0 0 25px 0;
+	letter-spacing: 25px;
+}
+.eyecatchingtext{
+	display: inline-block;
+	padding-left: 25px;
+	font-size: 2rem;
+}
+.en{
+	display: block;
+	text-align: center;
+	font-size: 1.142rem;
+	padding: 5px 0;
+	letter-spacing: 2px;
+	font-family: 'Libre Baskerville', serif;
+}
+.linkbtnlist{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.contactbtn{
+	margin: 0 16px 16px; 
+}
+.contactbtn a{
+	width: 166px;
+	display: inline-block;
+	border: 2px solid #fff;
+	padding:  8px 10px;
+	border-radius: 30px;
+	font-size: 1.285rem;
+	font-weight: bold;
+	transition: all ease .3s;
+	background: rgba(0,0,0,.4);
+}
+.contactbtn a:hover{
+	background: #000;
+	color: #fff;
+	transition: all ease .3s;
+}
+
+/*====================
+ SP Default
+====================*/
+@media screen and (max-width:767px){
+	.contents{
+		padding: 0 3%;
+		height: calc(100vh - 106px);
+	}
+	.bgArea{
+		height: calc(100vh - 106px);
+		background-size: auto 100%;
+	}
+	.mainrogo img{
+		width: 80%;
+	}
+	.eyecatching{
+		letter-spacing: 12px;
+	}
+	.eyecatchingtext{
+		font-size: 1.428rem;
+		padding-left: 12px;
+	}
+	.en{
+		font-size: 1rem;
+	}
+	.linkbtnlist{
+		display: block;
+	}
+	.contactbtn{
+		margin-bottom: 15px;
+	}
+	.contactbtn a{
+		font-size: 1.285rem;
+	}
+	.contact{
+		display: none;
+	}
+}

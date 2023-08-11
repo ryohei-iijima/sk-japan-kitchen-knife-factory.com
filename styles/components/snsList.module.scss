@@ -1,0 +1,13 @@
+@import '/styles/utils/breakpoint';
+@import '/styles/utils/mixin';
+
+.sns-link-list{
+    .sns-link {
+        display: inline-block;
+        margin-right: 5px;
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}

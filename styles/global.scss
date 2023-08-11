@@ -1,0 +1,174 @@
+@import '/styles/utils/reset';
+
+/*====================
+ contents
+====================*/
+.contents {
+    background: #fff;
+    height: auto;
+    display: block;
+    padding: 80px 0;
+}
+
+.article-contents {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.285rem;
+    text-align: center;
+    line-height: 1;
+    font-family: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+    margin-bottom: 38px;
+}
+
+.page-title .en-title {
+    display: block;
+    padding: 8px 0 0 0;
+    font-size: 16px;
+}
+
+/*====================
+ SP Default
+====================*/
+@media screen and (max-width:767px) {
+    .sp-break {
+        display: block;
+    }
+
+    .pc-break {
+        display: none;
+    }
+
+    .header {
+        padding: 10px 3%;
+        position: relative;
+    }
+
+    .header .sns-link-list .sns-link {
+        margin-right: 10px;
+    }
+
+    .header .sns-link-list .sns-link img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-menu-btn {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 30px;
+        height: 22px;
+        margin-left: auto;
+        position: relative;
+        z-index: 999999;
+    }
+
+    .nav-menu-btn span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        border-radius: 5px;
+        background: #ffffff;
+        margin-bottom: 5px;
+        transition: all ease .3s;
+    }
+
+    .active span {
+        position: absolute;
+        top: 10px;
+        transition: all ease .3s;
+    }
+
+    .active span:nth-child(1) {
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+    .active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .active span:nth-child(3) {
+        right: 0;
+        transform: rotate(-45deg);
+    }
+
+    .nav-menu-btn span:last-child {
+        margin-bottom: 0;
+    }
+
+    .sp-header {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 10% 0;
+        background: #000000;
+        z-index: 99999;
+        box-sizing: border-box;
+    }
+
+    .sp-header .rogo {
+        width: 60%;
+        margin: 0 auto 10px;
+    }
+
+    .sp-header .rogo img {
+        width: 100%;
+    }
+
+    .sp-header .sns-link-list {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .sp-header .sns-link-list .sns-link {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .sp-header .sns-link-list .sns-link img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .sp-header nav {
+        margin: 0 auto;
+    }
+
+    .sp-header nav ul li {
+        display: block;
+        padding: 0;
+    }
+
+    .sp-header nav ul li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.142rem;
+        text-align: center;
+    }
+
+    .contents {
+        height: auto;
+        padding: 50px 3%;
+    }
+
+    .article-contents {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 1.857rem;
+        margin-bottom: 38px;
+    }
+
+    .page-title .en-title {
+        font-size: 1.142rem;
+        padding: 12px 0 0 0;
+    }
+}

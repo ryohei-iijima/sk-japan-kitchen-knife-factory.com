@@ -1,0 +1,25 @@
+@import '/styles/info/layout';
+
+.page-type-returnedexchange dl {
+    margin-bottom: 30px;
+    @include mq(md) {
+        margin-bottom: 50px;
+    }
+    dt {
+        font-size: 1.285rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include mq(md) {
+            font-size: 18px;
+        }
+    }
+    dd {
+        margin-bottom: 1em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        ul li {
+            padding-bottom: 5px;
+        }
+    }
+}
