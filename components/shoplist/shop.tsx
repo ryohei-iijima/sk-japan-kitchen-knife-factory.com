@@ -1,28 +1,52 @@
-import styles from '@/styles/components/shoplist.module.scss'
+import styles from '@/styles/components/shop.module.scss'
+import Map from '@/components/Map'
 
-export default function Shoplist() {
+type ShopInfo = {
+  shopInfo: {
+    shopName: string,
+    enShopName: string,
+    isEnglish: Boolean,
+    openingHours: string,
+    regularHoliday: string,
+    postCode: string,
+    address: string,
+    tel: string,
+    comment: string,
+    mapId: string,
+    mapInfo: {
+      center: {
+        lat: number,
+        lng: number,
+      },
+      zoom: number
+    }
+  }
+}
+
+const englishElement = (isEnglish:Boolean) => {
+  if (isEnglish) {
+    return <div className={styles["icon-english"]}>English OK</div>
+  }
+  return;
+}
+
+export default function Shop(Props:ShopInfo) {
   return (
     <>
-      <section className="item">
-        <div className="flexbox">
-          <div className="detaile">
-            <h3 className="name">刃物屋 越乃一刀 本舗 かっぱ橋本通り店<span className="em-text">The Knife Shop
-              Koshinoitto Honpo Kappabashi-Hondori Shop</span></h3>
-            <div className="icon-english">English OK</div>
-            <div className="information">
-              <p><span className="icon icon-time"></span>営業時間／9:00〜18:00(19:00閉店の場合も有)</p>
-              <p><span className="icon icon-schedule"></span>定休日／なし</p>
-              <p><span className="icon icon-map"></span>住所／〒111-0035　 東京都台東区西浅草２丁目２２−７ 高知尾ビル 1階
-              </p>
-              <p><span className="icon icon-tel"></span>TEL :03-5830-3808</p>
+      <section className={styles.item}>
+        <div className={styles.flexbox}>
+          <div className={styles.detaile}>
+            <h3 className={styles.name}>{Props.shopInfo.shopName}<span className={styles["em-text"]}>{Props.shopInfo.enShopName}</span></h3>
+            { englishElement(Props.shopInfo.isEnglish)}
+            <div className={styles.information}>
+              <p><span className={`${styles.icon} ${styles["icon-time"]}`}></span>営業時間／{Props.shopInfo.openingHours}</p>
+              <p><span className={`${styles.icon} ${styles["icon-schedule"]}`}></span>定休日／{Props.shopInfo.regularHoliday}</p>
+              <p><span className={`${styles.icon} ${styles["icon-map"]}`}></span>住所／〒{Props.shopInfo.postCode}&nbsp;{Props.shopInfo.address}</p>
+              <p><span className={`${styles.icon} ${styles["icon-tel"]}`}></span>TEL :{Props.shopInfo.tel}</p>
             </div>
-            <div className="comment">かっぱ橋の中心街にある包丁ショップです。<br />
-              英語、中国語など海外のお客様にも対応可能です。<br />
-              刃物の町、燕三条を中心に全国の刃物産地の包丁を職人様からご家庭の包丁まで取り揃えています。<br />
-              止水の包丁も展示販売しております。<br />
-              オーダーも可能ですのでお気軽にお申し付けください。</div>
+            <div className={styles.comment}>{Props.shopInfo.comment}</div>
           </div>
-          <div className="map koshinoitto"></div>
+          <div className={`${styles.map} ${styles[Props.shopInfo.mapId]}`}><Map mapInfo={Props.shopInfo.mapInfo}/></div>
         </div>
       </section>
     </>
