@@ -1,4 +1,5 @@
 import styles from '@/styles/top/top.module.scss'
+import Slider from '@/components/slider'
 
 export default function Home() {
   return (
@@ -24,7 +25,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.bgArea}></div>
+      <div className={styles.bgArea}>
+        <Slider />
+      </div>
     </>
   )
 }
