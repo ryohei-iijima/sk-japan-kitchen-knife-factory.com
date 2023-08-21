@@ -16,10 +16,12 @@ const containerStyle = {
   height: "286px"
 };
 
+const googleMapsApiKey = process.env.GOOGLE_MAP_API_KEY;
+
 export default function Map (Props:Props) {
 const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyBkG1-GmWhIucOMP5sJXClBpZP-E2PKD5w"
+    googleMapsApiKey: googleMapsApiKey
     })
 
     return isLoaded ? (
