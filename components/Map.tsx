@@ -16,7 +16,7 @@ const containerStyle = {
   height: "286px"
 };
 
-const googleMapsApiKey = process.env.GOOGLE_MAP_API_KEY;
+const googleMapsApiKey = process.env.GOOGLE_MAP_API_KEY as string;
 
 export default function Map (Props:Props) {
 const { isLoaded } = useJsApiLoader({
