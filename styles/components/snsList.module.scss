@@ -10,4 +10,16 @@
             height: 22px;
         }
     }
+    &.sp-header-sns {
+        margin-bottom: 30px;
+        text-align: center;
+        .sns-link {
+            display: inline-block;
+            margin: 0 15px;
+            img {
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
 }
